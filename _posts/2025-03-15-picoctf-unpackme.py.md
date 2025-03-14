@@ -1,5 +1,5 @@
 ---
-title: 'picoCTF 2022 | convertme.py WriteUp'
+title: 'picoCTF 2022 | unpackme.py WriteUp'
 author: appdone
 categories: [picoCTF 2022]
 tags: [reverse engineering]
