@@ -1,7 +1,7 @@
 ---
 title: 'picoCTF 2022 | unpackme.py WriteUp'
 author: appdone
-categories: [picoCTF 2022]
+categories: [picoCTF 2022 Challenges]
 tags: [reverse engineering]
 render_with_liquid: false
 ---
