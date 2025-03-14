@@ -1,1 +1,3 @@
-http://appdone.github.io
+# appdone.github.io
+
+Çözdüğüm zafiyetli makineleri burada paylaşıyorum.
