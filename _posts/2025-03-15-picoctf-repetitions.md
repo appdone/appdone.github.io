@@ -1,7 +1,7 @@
 ---
 title: 'picoCTF 2023 | Repetitions WriteUp'
 author: Appdone
-categories: [picoCTF 2023]
+categories: [picoCTF 2023 Challenges]
 tags: [base64]
 render_with_liquid: false
 ---
