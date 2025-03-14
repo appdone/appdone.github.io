@@ -1,6 +1,6 @@
 ---
 title: 'picoCTF 2022 | Glitch Cat WriteUp'
-author: appdone
+author: 'appdone'
 categories: [picoCTF 2022 Challenges]
 render_with_liquid: false
 ---
