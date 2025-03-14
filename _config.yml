@@ -34,10 +34,6 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/appdone # change to your GitHub homepage
-    - https://medium.com/@appdone
-    - https://tryhackme.com/p/appdone
-    - https://app.hackthebox.com/profile/2039932
-    - https://play.picoctf.org/users/appdone
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
