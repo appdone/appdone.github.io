@@ -1,7 +1,7 @@
 ---
 title: 'picoCTF 2022 | convertme.py WriteUp'
 author: appdone
-categories: [picoCTF]
+categories: [picoCTF 2022]
 tags: [binary, decimal]
 render_with_liquid: false
 ---
