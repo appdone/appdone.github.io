@@ -1,6 +1,6 @@
 ---
 title: 'picoCTF 2023 | Permissions WriteUp'
-author: appdone
+author: 'appdone'
 categories: [picoCTF 2023 Challenges]
 tags: [sudo]
 render_with_liquid: false
