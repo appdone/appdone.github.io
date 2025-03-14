@@ -4,4 +4,4 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-### Hey, I’m appdone.
+###Çözdüğüm zafiyetli makineleri burada paylaşıyorum.
