@@ -159,5 +159,6 @@ public class KeygenMe {
     System.out.println("Valid key");
   }
 }
-
 ```
+
+Gördüğünüz üzere bir anahtar istiyor ve girilen anahtarın hangi karaktere denk geldiğini kontrol ediyor. Sonrada ekrana "Invalid Key" yazısını yazdırıyor. Sondan başlayarak kontrol edilen karakterleri birleştirdiğimizde bayrağı elde ediyoruz.
