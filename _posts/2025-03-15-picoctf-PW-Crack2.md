@@ -1,5 +1,5 @@
 ---
-title: 'picoCTF | PW Crack 2 WriteUp'
+title: 'picoCTF 2022 | PW Crack 2 WriteUp'
 author: 'appdone'
 categories: [picoCTF 2022 Challenges]
 render_with_liquid: false
