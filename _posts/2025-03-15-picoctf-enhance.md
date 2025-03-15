@@ -7,7 +7,7 @@ render_with_liquid: false
 
 Merhaba, bu yazımda picoCTF platformunda yer alan "Enhance!" isimli meydan okumanın çözümünü göstereceğim. Öncelikle verilen .svg dosyasının kaynağını görmek istedim ve kaynak kodlarını açtığımda bayrağın parça parça ayrılmış halde olduğunu gördüm. Tek yapmamız gereken şey parçaları birleştirmektir.
 
-```svg
+```
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
