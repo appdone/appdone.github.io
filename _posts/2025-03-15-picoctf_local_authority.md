@@ -10,7 +10,7 @@ image:
 
 Bu yazıda, picoCTF platformunda yer alan "Local Authority" isimli meydan okumayı çözeceğiz.
 
-![login page](1.webp){: width="1200" height="400" }
+![login page](1.webp){: width="500" height="400" }
 
 Web sitesinde bir giriş formu bulunuyor. Rastgele bilgiler girdikten sonra bizi login.php sayfasına yönlendiriyor. Orada giriş yapılamadı hatası ile karşılaşıyoruz. login.php sayfasının kaynak kodunu görüntülediğimizde ise bir takım javascript kodları ile karşılaşıyoruz.
 
