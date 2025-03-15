@@ -1,6 +1,6 @@
 ---
 title: 'TryHackMe | RootMe WriteUp'
-author: 'appdone'
+author: appdone
 categories: [TryHackMe]
 render_with_liquid: false
 media_subpath: /images/tryhackme_rootme/
