@@ -1,8 +1,7 @@
 ---
-title: 'picoCTF 2022 | convertme.py WriteUp'
+title: 'picoCTF 2022 | Chrono WriteUp'
 author: 'appdone'
-categories: [picoCTF 2022 Challenges]
-tags: [binary, decimal]
+categories: [picoCTF 2023 Challenges]
 render_with_liquid: false
 ---
 
