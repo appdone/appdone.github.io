@@ -3,7 +3,7 @@ title: 'picoCTF 2022 | Local Authority WriteUp'
 author: 'appdone'
 categories: [picoCTF 2022 Challenges]
 render_with_liquid: false
-media_subpath: /images/picoctf_local_authority/
+media_subpath: images/picoctf_local_authority/
 ---
 
 Bu yazıda, picoCTF platformunda yer alan "Local Authority" isimli meydan okumayı çözeceğiz.
