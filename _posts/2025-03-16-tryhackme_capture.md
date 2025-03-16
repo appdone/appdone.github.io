@@ -20,8 +20,6 @@ Bu güvenlik önlemini geçebilmek için deneme yanılma saldırısı yaparken d
 
 Python programlama dilini kullanarak hızlıca bir deneme yanılma aracı oluşturdum ve çalıştırdıktan sonra kullanıcı bilgilerini elde ettim. Kodlara [buradan](https://github.com/appdone/CTF-Tools/blob/main/TryHackMe/capture.py) ulaşabilirsiniz.
 
-https://github.com/appdone/CTF-Tools/blob/main/TryHackMe/capture.py
-
 ```console
 $ python3 capture.py 
 username: *** - password: ***
