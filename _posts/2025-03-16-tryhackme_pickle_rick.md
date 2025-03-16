@@ -1,5 +1,5 @@
 ---
-title: 'TryHackMe | RootMe WriteUp'
+title: 'TryHackMe | Pickle Rick WriteUp'
 author: appdone
 categories: [TryHackMe]
 tags: [command execution, sudo]
