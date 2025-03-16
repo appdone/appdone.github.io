@@ -18,7 +18,7 @@ Yanlış kullanıcı adı girildiğinde kullanıcının bulunmadığını söyl�
 
 Bu güvenlik önlemini geçebilmek için deneme yanılma saldırısı yaparken doğrulama sorusunu çözecek bir uygulama yapmamız gerekiyor.
 
-Python programlama dilini kullanarak hızlıca bir deneme yanılma aracı oluşturdum ve çalıştırdıktan sonra kullanıcı bilgilerini elde ettim. Kodlara [buradan]([ling.html](https://github.com/appdone/CTF-Tools/blob/main/TryHackMe/capture.py)) ulaşabilirsiniz.
+Python programlama dilini kullanarak hızlıca bir deneme yanılma aracı oluşturdum ve çalıştırdıktan sonra kullanıcı bilgilerini elde ettim. Kodlara [buradan](https://github.com/appdone/CTF-Tools/blob/main/TryHackMe/capture.py) ulaşabilirsiniz.
 
 https://github.com/appdone/CTF-Tools/blob/main/TryHackMe/capture.py
 
