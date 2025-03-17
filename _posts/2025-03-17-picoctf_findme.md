@@ -1,7 +1,7 @@
 ---
 title: 'PicoCTF 2023 | FindMe WriteUp'
 author: appdone
-categories: [PicoCTF 2023 Challenges]
+categories: [picoCTF 2023 Challenges]
 render_with_liquid: false
 media_subpath: /images/picoctf_findme/
 image:
