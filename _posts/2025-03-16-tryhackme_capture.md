@@ -1,7 +1,7 @@
 ---
 title: 'TryHackMe | Capture! WriteUp'
 author: appdone
-categories: [TryHackMe]
+categories: [TryHackMe Challenges]
 render_with_liquid: false
 media_subpath: /images/tryhackme_capture/
 image:
