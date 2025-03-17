@@ -1,7 +1,7 @@
 ---
 title: 'TryHackMe | Dav WriteUp'
 author: appdone
-categories: [TryHackMe]
+categories: [TryHackMe Challenges]
 tags: [webdav, sudo]
 render_with_liquid: false
 ---
