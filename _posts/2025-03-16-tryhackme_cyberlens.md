@@ -1,7 +1,7 @@
 ---
 title: 'TryHackMe | CyberLens WriteUp'
 author: appdone
-categories: [TryHackMe]
+categories: [TryHackMe Challenges]
 render_with_liquid: false
 media_subpath: /images/tryhackme_cyberlens/
 image:
