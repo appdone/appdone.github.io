@@ -17,7 +17,7 @@ PORT   STATE SERVICE VERSION
 | drwxr-xr-x   17 0        0            3700 Mar 17 13:20 dev
 | drwxr-xr-x   85 0        0            4096 Aug 13  2019 etc
 | drwxr-xr-x    3 0        0            4096 Aug 11  2019 home
-> | drwxrwxrwx    2 1000     1000         4096 Aug 11  2019 notread [NSE: writeable]
+| drwxrwxrwx    2 1000     1000         4096 Aug 11  2019 notread [NSE: writeable]
 | ...
 22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
 | ssh-hostkey: 
