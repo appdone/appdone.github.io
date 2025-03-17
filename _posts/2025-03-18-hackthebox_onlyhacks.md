@@ -9,7 +9,7 @@ image:
   path: logo.webp
 ---
 
-Bu yazımda HackTheBox platformunda yer alan “OnlyHacks” isimli meydan okumayı çözeceğim. Meydan okuma sevgililer gününe özel olarak hazırlanmış kolay seviye bir web uygumalasıdır.
+Bu yazımda HackTheBox platformunda yer alan “OnlyHacks” isimli meydan okumayı çözeceğim. Meydan okuma sevgililer gününe özel olarak hazırlanmış kolay seviye bir web uygulamasıdır.
 
 ![](1.webp){: width="1200" height="600" }
 
@@ -29,7 +29,7 @@ Cookie bilgilerini yakalamak için requestcatcher.com sitesini kullanacağım.
 
 ![](3.webp){: width="1200" height="600" }
 
-Elde ettiğimiz cookie bilgilerini koplayalıp devtools aracılığıyla kendimizinkiyle değiştiriyoruz. Böylece sayfayı yenilediğimizde bayrağı başka bir kişiden gelen mesaj içerisinde buluyoruz.
+Elde ettiğimiz cookie bilgilerini kopyalayıp devtools aracılığıyla kendimizinkiyle değiştiriyoruz. Böylece sayfayı yenilediğimizde bayrağı başka bir kişiden gelen mesaj içerisinde buluyoruz.
 
 ![](4.webp){: width="1200" height="600" }
 
@@ -37,4 +37,4 @@ Bunun haricinde mesajları görüntülediğimiz sayfaya rid parametresi ile yön
 
 ![](5.webp){: width="1200" height="600" }
 
-Kısaca web uygulamasında hem XSS zafiyeti hemde IDOR zafiyeti barınıyor.
+Kısaca web uygulamasında hem XSS zafiyeti hem de IDOR zafiyeti barınıyor.
