@@ -1,7 +1,7 @@
 ---
 title: 'TryHackMe | Pickle Rick WriteUp'
 author: appdone
-categories: [TryHackMe]
+categories: [TryHackMe Challenges]
 tags: [command execution, sudo]
 render_with_liquid: false
 ---
