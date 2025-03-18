@@ -31,7 +31,7 @@ Bildirimlerin okunduğu sayfada XSS zafiyeti bulunuyorsa eğer bu javascript kod
 
 ![](3.webp){: width="1200" height="600" }
 
-En azından XSS zafiyetinin varlığından haberdar olmuş olduk. Anladığım kadarıyla hedef dosyayı yerel ağdan çekmemiz gerekiyor. Bunun içinde XSS zafiyetinden yararlanmalıyız. Javascript’ten pek almadığım için internet üzerinden bir arama yaptım ve aşağıdaki kodu buldum.
+En azından XSS zafiyetinin varlığından haberdar olmuş olduk. Anladığım kadarıyla hedef dosyayı yerel ağdan çekmemiz gerekiyor. Bunun içinde XSS zafiyetinden yararlanmalıyız. Javascript’ten pek anlamadığım için internet üzerinden bir arama yaptım ve aşağıdaki kodu buldum.
 
 ```js
 <script>
