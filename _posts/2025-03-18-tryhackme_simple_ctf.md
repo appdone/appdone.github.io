@@ -2,7 +2,7 @@
 title: 'TryHackMe | Simple CTF WriteUp'
 author: appdone
 categories: [TryHackMe Challenges]
-tags: [sql injection]
+tags: [sql injection, sudo]
 render_with_liquid: false
 ---
 
