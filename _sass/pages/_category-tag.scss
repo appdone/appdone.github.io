@@ -1,0 +1,77 @@
+@use '../abstracts/breakpoints' as bp;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/placeholders';
+
+.dash {
+  margin: 0 0.5rem 0.6rem 0.5rem;
+  border-bottom: 2px dotted var(--dash-color);
+}
+
+#page-category,
+#page-tag {
+  ul > li {
+    line-height: 1.5rem;
+    padding: 0.6rem 0;
+
+    &::before {
+      background: var(--tag-border); /* Nokta rengi */
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      display: block;
+      content: '';
+      position: relative;
+      top: 0.6rem;
+      margin-right: 0.5rem;
+
+      @include bp.lt(bp.get(sm)) {
+        margin: 0 0.5rem;
+      }
+    }
+
+    > a {
+      @extend %no-bottom-border;
+
+      font-size: 1.1rem;
+      color: var(--text-color); /* Metin rengi */
+      text-decoration: none;
+
+      &:hover {
+        color: var(--link-color); /* Bağlantı rengi hover'da */
+      }
+
+      @include bp.lt(bp.get(sm)) {
+        @include mx.text-ellipsis;
+      }
+    }
+  }
+}
+
+#page-tag h1 > i {
+  font-size: 1.2rem;
+  color: var(--text-muted-color); /* Etiket ikonu rengi */
+}
+
+#page-category h1 > i {
+  font-size: 1.25rem;
+  color: var(--text-muted-color); /* Kategori ikonu rengi */
+}
+
+#page-category,
+#page-tag,
+#access-lastmod {
+  a:hover {
+    @extend %link-hover;
+    color: var(--link-underline-color); /* Bağlantı altı renk */
+    margin-bottom: -1px; /* Sıçrama engelleniyor */
+  }
+}
+
+#page-category,
+#page-tag {
+  background-color: var(--sidebar-bg); /* Koyu yan menü arka planı */
+}
+
+#access-lastmod {
+  background-color: var(--main-bg); /* Ana arka plan rengi */
+}
