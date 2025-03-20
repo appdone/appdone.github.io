@@ -19,7 +19,7 @@ Web uygulamasında bulunan "Local File Inclusion" zafiyetinden yararlanarak "blu
 
 ## Keşif aşaması
 
-### Nmap Taraması
+### Nmap taraması
 
 ```console
 $ nmap -sV -sC -T4 10.10.35.115
@@ -47,7 +47,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Kullanılan hazır tema düzenlenmemiş gibi duruyor. "page" parametresinin aldığı değeri /etc/passwd ve türevleri olacak şekilde değiştirdiğimde her seferinde home.html sayfasına yönlendiriyor. Sistemde bulunan dosyaları görüntüleyebilmek için parametreye "php://filter/convert.base64-encode/resource=/etc/passwd" şeklinde bir değer girdiğimde ise base64 ile kodlanmış olarak dosya içeriğini okuyabiliyorum.
 
-## Sömürü Aşaması
+## Sömürü aşaması
 
 ```console
 $ curl -s http://10.10.35.115/index.php?page=php://filter/convert.base64-encode/resource=/etc/passwd | base64 -d                                                                          
