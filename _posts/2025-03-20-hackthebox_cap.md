@@ -11,7 +11,7 @@ image:
 
 ## Özet
 
-eklenecektir...
+Web uygulamasının PCAP dosyalarını indirdiğimiz alanında bir IDOR zafiyetinin oludğunu öğrenecek ve sırasıyla tüm PCAP dosyalarını indirip, inceleyeceğiz. PCAP dosyalarından birinde bulduğumuz kullanıcı bilgileri ile SSH servisine bağlanacağız. Daha sonra ise python dosyasının setuid yetkisinin olduğunu öğrenecek ve bu yetenekten yararlanarak yetki yükselteceğiz.
 
 ## Keşif aşaması
 
