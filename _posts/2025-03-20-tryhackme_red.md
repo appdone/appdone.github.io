@@ -102,7 +102,7 @@ blue@red:~$ cat flag1
 THM{***?}
 ```
 
-Başta belirtiğim gibi ara ara bağlantı sonlandırılıyor ve parola değiştiriliyor. Aynı parola listesini kullanarak tekrar tekrar deneme yanılmsa saldırısı yapmanız gerekebilir.
+Başta belirtiğim gibi ara ara bağlantı sonlandırılıyor ve parola değiştiriliyor. Aynı parola listesini kullanarak tekrar tekrar deneme yanılma saldırısı yapmanız gerekebilir.
 
 ## Yetki yükseltme
 
