@@ -12,7 +12,7 @@ image:
 ## Özet
 Web uygulamasında bulunan "Local File Inclusion" zafiyetinden yararlanarak "blue" kullanıcısının dizinideki gizli dosyayı keşfedeceğiz. Bu dosyadaki yönergeleri takip ederek bir parola listesi oluşturacak ve bu parola listesini kullanarak SSH servisine deneme yanılma saldırısı yapacağız. Sonucunda elde ettiğimiz parolayı kullanarak SSH servisine bağlanacak ve yetki yükseltmek için bir takım kontroller yapacağız. Arka planda çalışan bağlantıyı fark ettikten sonra domain'in IP adresini değiştirecek ve bağlantıyı kendi makinemize yönlendireceğiz. Sonrada zafiyetli pkexec uygulamasını fark edecek ve internette bulduğumuz bir sömürü aracını kullanarak yetki yükselteceğiz.
 
-## Makine hakkında ek bilgiler
+### Makine hakkında ek bilgiler
 
 - Makineye bağlanan kullanıcıların bağlantıları sonlandırılıp, parolaları değiştiriliyor.
 - Odağımızı bozacak mesajlar ile karşılaşabiliriz.
