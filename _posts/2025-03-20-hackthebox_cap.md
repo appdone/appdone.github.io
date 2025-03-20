@@ -11,27 +11,23 @@ image:
 
 ## Özet
 
-Web uygulamasının PCAP dosyalarını indirdiğimiz alanında bir IDOR zafiyetinin oludğunu öğrenecek ve sırasıyla tüm PCAP dosyalarını indirip, inceleyeceğiz. PCAP dosyalarından birinde bulduğumuz kullanıcı bilgileri ile SSH servisine bağlanacağız. Daha sonra ise python dosyasının setuid yetkisinin olduğunu öğrenecek ve bu yetenekten yararlanarak yetki yükselteceğiz.
+Web uygulamasının PCAP dosyalarını indirdiğimiz alanında bir IDOR zafiyetinin olduğunu öğrenecek ve sırasıyla tüm PCAP dosyalarını indirip, inceleyeceğiz. PCAP dosyalarından birinde bulduğumuz kullanıcı bilgileri ile SSH servisine bağlanacak, daha sonra ise python dosyasının setuid yetkisinin olduğunu öğrenecek ve bu yetenekten yararlanarak yetki yükselteceğiz.
 
 ## Keşif aşaması
 
 ### Nmap taraması
 
 ```console
-$ nmap -sV -sC -T4 10.10.10.245                                                                                                                                                           
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-03-20 13:30 EDT                                                                                                                            
-Nmap scan report for 10.10.10.245                                                                                                                                                             
-Host is up (0.52s latency).                                                                                                                                                                   
-Not shown: 824 closed tcp ports (reset), 173 filtered tcp ports (no-response)                                                                                                                 
-PORT   STATE SERVICE VERSION                                                                                                                                                                  
-21/tcp open  ftp     vsftpd 3.0.3                                                                                                                                                             
-22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)                                                                                                             
-| ssh-hostkey:                                                                                                                                                                                
-|   3072 fa:80:a9:b2:ca:3b:88:69:a4:28:9e:39:0d:27:d5:75 (RSA)                                                                                                                                
-|   256 96:d8:f8:e3:e8:f7:71:36:c5:49:d5:9d:b6:a4:c9:0c (ECDSA)                                                                                                                               
-|_  256 3f:d0:ff:91:eb:3b:f6:e1:9f:2e:8d:de:b3:de:b2:18 (ED25519)                                                                                                                             
-80/tcp open  http    gunicorn                                                                                                                                                                 
-|_http-server-header: gunicorn                                                                                                                                                                
+$ nmap -sV -sC -T4 10.10.10.245         
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   3072 fa:80:a9:b2:ca:3b:88:69:a4:28:9e:39:0d:27:d5:75 (RSA)
+|   256 96:d8:f8:e3:e8:f7:71:36:c5:49:d5:9d:b6:a4:c9:0c (ECDSA)
+|_  256 3f:d0:ff:91:eb:3b:f6:e1:9f:2e:8d:de:b3:de:b2:18 (ED25519)
+80/tcp open  http    gunicorn
+|_http-server-header: gunicorn
 |_http-title: Security Dashboard
 ...
 ```
@@ -42,7 +38,7 @@ Tarama sonucunda üç adet port'un açık olduğunu ve HTTP servisinde çalışa
 
 ![](1.webp){: width="1200" height="600" }
 
-Web uygulamasında colorlib tarafından yapılmış, dört sayfadan oluşan bir güvenlik teması kullanılıyor. "IP Config" ve "Netword Status" sayfasında belirli komutlardan dönen sonuçlar bulunuyor.
+Web uygulamasında "colorlib" tarafından yapılmış, dört sayfadan oluşan bir güvenlik teması kullanılıyor. "IP Config" ve "Netword Status" sayfasında belirli komutlardan dönen sonuçlar bulunuyor.
 
 ![](2.webp){: width="1200" height="600" }
 
@@ -56,7 +52,7 @@ Son sayfada ise PCAP dosyalarını indirebileceğimiz bir bölüm var.
 
 ![](4.webp){: width="1200" height="600" }
 
-FTP servisinde bağlandıktan sonra ise nathan kullanıcısının dizininde olduğumuzu öğreniyoruz ve dizin geçişlerinin açık olduğunu görüyoruz. Haliyle aynı kullanıcı bilgilerini kullanarak SSH servisine bağlanabileceğimi düşündüm ve bağlandıktan sonra ise ilk bayrağı almak için user.txt dosyasını görüntüledim.
+FTP servisinde bağlandıktan sonra ise nathan kullanıcısının dizininde olduğumuzu öğreniyoruz ve dizin geçişlerinin açık olduğunu görüyoruz. Haliyle aynı kullanıcı bilgilerini kullanarak SSH servisine bağlanabileceğimizi düşündüm ve bağlandıktan sonra ise ilk bayrağı almak için user.txt dosyasını görüntüledim.
 
 ```console
 nathan@cap:~$ cat user.txt 
