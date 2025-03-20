@@ -23,7 +23,7 @@
   --card-header-bg: #222233;
   --checkbox-color: rgb(140, 140, 150);
   --checkbox-checked-color: var(--link-color);
-  --img-bg: radial-gradient(circle, rgb(15, 15, 20) 0%, rgb(25, 25, 30) 100%);
+  --img-bg: var(--main-bg);
   --shimmer-bg: linear-gradient(
     90deg,
     rgba(90, 80, 110, 0) 0%,
