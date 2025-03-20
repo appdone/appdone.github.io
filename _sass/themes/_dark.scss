@@ -31,6 +31,9 @@
     rgba(90, 80, 110, 0) 100%
   );
 
+  /* Logo */
+  --logo-bg: var(--main-bg);
+
   /* Sidebar */
   --site-title-color: #808080;
   --site-subtitle-color: #999999;
@@ -94,7 +97,7 @@
   --categories-icon-hover-color: white;
 
   /* Archive */
-  --timeline-node-bg: rgb(70, 75, 80);
+  --timeline-node-bg: rgb(160, 165, 175);
   --timeline-color: rgb(70, 75, 80);
   --timeline-year-dot-color: var(--timeline-color);
 }
