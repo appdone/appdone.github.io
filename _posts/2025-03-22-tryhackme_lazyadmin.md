@@ -11,7 +11,7 @@ image:
 
 ## Özet
 
-Web uygulamasında `SweetRice` adında bir uygulama kullandığını öğreneceğiz. Daha sonra bir yedeklenmiş bir sql dosyası ile karşılaşacağız. İçerisindeki kullanıcı bilgilerini kullanarak web uygulamasına giriş yapacak ve reverse shell dosyamızı yükleyeceğiz. Dosyayı çalıştırıp, bağlantı elde ettikten sonra ise sistemde bulunan bir dosyayı root haklarında parola gerektirmeden çalıştırabildiğimizi öğreneceğiz. Bu dosyayi incelediğimizde ise başka bir dosyayı çalıştırdığını ve çalıştırdığı dosyanın düzenleme yetkisinin bulunduğunu öğreneceğiz. İçerisine reverse shell komutumuzu girdikten sonra ilk dosyayı çalıştırarak root yetkisinde bir bağlantı alacağız.
+Web uygulamasında `SweetRice` adında bir uygulama kullandığını öğreneceğiz. Daha sonra yedeklenmiş bir sql dosyası ile karşılaşacağız. İçerisindeki kullanıcı bilgilerini kullanarak web uygulamasına giriş yapacak ve reverse shell dosyamızı yükleyeceğiz. Dosyayı çalıştırıp, bağlantı elde ettikten sonra ise sistemde bulunan bir dosyayı root haklarında parola gerektirmeden çalıştırabildiğimizi öğreneceğiz. Bu dosyayi incelediğimizde ise başka bir dosyayı çalıştırdığını ve çalıştırdığı dosyanın düzenleme yetkisinin bulunduğunu öğreneceğiz. İçerisine reverse shell komutumuzu girdikten sonra ilk dosyayı çalıştırarak root yetkisinde bir bağlantı alacağız.
 
 ## Keşif aşaması
 
