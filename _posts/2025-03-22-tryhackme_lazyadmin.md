@@ -48,7 +48,7 @@ Tarama sonucunda `content` adında bir dizin olduğunu öğreniyoruz. Bu dizinde
 
 ![](1.webp){: width="1200" height="600" }
 
-Gördüğünüz üzere `SweetRice` adında bir yazılım kullanılıyor. `/content/changelog.txt` dosyasına baktığımızda bu yazılımın `1.5.0` sürümünü kullandığını görüyoruz. İnternette bu sürüme uygun bir exploit bulunuyor. Ancak sömürme işlemini gerçekleştirebilmek için bir kullanıcı adı ve parolaya ihtiyacımız var. dirsearch aracı ile tekrar bir arama yaptığımızda `content/inc` adında bir dizinle daha karşılaşıyoruz.
+Gördüğünüz üzere `SweetRice` adında bir yazılım kullanılıyor. `/content/changelog.txt` dosyasına baktığımızda bu yazılımın `1.5.0` sürümünü kullandığını görüyoruz. İnternette bu sürüme uygun bir exploit var. Ancak sömürme işlemini gerçekleştirebilmek için bir kullanıcı adı ve parolaya ihtiyacımız var. dirsearch aracı ile tekrar bir arama yaptığımızda `content/inc` adında bir dizinle daha karşılaşıyoruz.
 
 ```console
 $ dirsearch -u 10.10.114.17/content/
