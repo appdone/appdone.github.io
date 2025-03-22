@@ -89,7 +89,7 @@ app@chemistry:~/instance$ strings database.db | grep "rosa"
 Mrosa63ed86ee9f624c7b14f1d4f43dc251a5'
 ```
 
-Hash'i [hashes.com](https://hashes.com/) sitesinin yardımıyla kırdıktan sonra rosa kullanıcısına ve ilk bayrağı kendi dizininden alıyoruz.
+Hash'i [hashes.com](https://hashes.com/) sitesinin yardımıyla kırdıktan sonra rosa kullanıcısına geçiş yapıyor ve ilk bayrağı kendi dizininden alıyoruz.
 
 ### root
 
