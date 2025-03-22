@@ -76,7 +76,7 @@ MD5 hash'i [hashes.com](https://hashes.com/) aracılığıyla kırdıktan sonra 
 
 ## Sömürü aşaması
 
-[bu](https://www.exploit-db.com/exploits/40716) sömürü aracını referans alarak siteye reverse shell kodumu yükleyeceğim.
+[bu](https://www.exploit-db.com/exploits/40716) sömürü aracını referans alarak siteye reverse shell dosyamızı yükleyeceğiz.
 
 ![](2.webp){: width="1200" height="600" }
 
