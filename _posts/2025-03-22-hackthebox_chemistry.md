@@ -1,7 +1,7 @@
 ---
 title: 'HackTheBox | Chemistry WriteUp'
 author: appdone
-categories: [HackTheBox Challenges]
+categories: [HackTheBox Machines]
 tags: [command injection, lfi, directory traversal]
 render_with_liquid: false
 media_subpath: /images/hackthebox_chemistry/
