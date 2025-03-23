@@ -205,7 +205,7 @@ uid=1000(namelessone) gid=1000(namelessone) groups=1000(namelessone),4(adm),24(c
 ...
 ```
 
-Bu dosyayı [GTFOBins](https://gtfobins.github.io/gtfobins/env/#suid) sitesinde arattıktan sonra sadece `/usr/bin/bash -p` komutunu ekleyerek yetki yükseltebileceğimizi öğreniyoruz. Bunu uyguladıktan sonra root haklarına sahip oluyor ve `/root` diziniden son bayrağımızı alıyoruz.
+Bu dosyayı [GTFOBins](https://gtfobins.github.io/gtfobins/env/#suid) sitesinde arattıktan sonra sadece `/usr/bin/bash -p` komutunu ekleyerek yetki yükseltebileceğimizi öğreniyoruz. Bunu uyguladıktan sonra root haklarına sahip oluyor ve `/root` dizininden son bayrağımızı alıyoruz.
 
 ```console
 namelessone@anonymous:/$ /usr/bin/env /bin/bash -p
