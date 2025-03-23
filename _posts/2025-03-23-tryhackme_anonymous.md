@@ -93,7 +93,7 @@ $ smbmap -H 10.10.84.107 -r
         IPC$                                                    NO ACCESS       IPC Service (anonymous server (Samba, Ubuntu))
 ```
 
-Bu dosyanın içerisinde `corgo2.jpg` ve `puppos.jpeg` olmak üzere iki dosya bulunuyor. İkisindende herhangi bir bilgi çıkaramadım.
+Bu paylaşımın içerisinde `corgo2.jpg` ve `puppos.jpeg` olmak üzere iki dosya bulunuyor. İkisindende herhangi bir bilgi çıkaramadım.
 
 ```console
 $smbclient \\\\10.10.84.107\\pics
