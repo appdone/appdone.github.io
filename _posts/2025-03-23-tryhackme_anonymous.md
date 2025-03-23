@@ -74,7 +74,7 @@ Nmap done: 1 IP address (1 host up) scanned in 15.91 seconds
 
 Tarama sonucunda 21 (FTP), 22 (SSH) ve 139/445 (SMB) numaralı portların açık olduğunu öğreniyoruz. Ayrıca `FTP` servisinin `anonymous` özelliği, SMB servisinin ise misafir kullanıcı özelliği aktif bulunuyor.
 
-### 139/445 numaralı portlarının incelenmesi
+### 139/445 numaralı portun incelenmesi
 
 SMBMap aracını kullanarak misafir oturumunda görüntüleyebildiğimiz dosyaları listelediğimizde pics adında bir paylaşım olduğunu görüyoruz. 
 
