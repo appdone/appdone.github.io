@@ -25,7 +25,7 @@ Tarama sonucunda 22 (SSH), 80 (HTTP) ve 3306 (Mysql) numaralı portların açık
 
 ![](2.webp){: width="1200" height="600" }
 
-Web uygulamasında örümcek adamın hırsızlık yaptığı bir haber paylaşılmış. Haberi paylaşan kişinin ismi `Super User`. Uygulamanın favicon dosyasına baktığımızda `joomla` içerik yönetim sisteminin kullanıldığını öğreniyoruz. Joomscan aracını kullanarak hedef uygulamayı tarayalım.
+Web uygulamasında örümcek adamın hırsızlık yaptığı bir haber paylaşılmış. Haberi paylaşan kişinin ismi `Super User`. Uygulamanın favicon kısmına baktığımızda `joomla` içerik yönetim sisteminin kullanıldığını öğreniyoruz. Joomscan aracını kullanarak hedef uygulamayı tarayalım.
 
 ```console
 $ joomla -u 10.10.19.236
