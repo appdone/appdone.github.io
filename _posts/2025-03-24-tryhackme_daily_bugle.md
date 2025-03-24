@@ -19,7 +19,7 @@ Daily Bugle, SQL injection zafiyetli eklentiye sahip olan bir joomla uygulaması
 
 ![](1.webp){: width="1200" height="600" }
 
-Tarama sonucunda 22 (SSH), 80 (HTTP) ve 3306 (Mysql) numaralı portların açık olduğunu öğreniyoruz. Mysql servisine yetkisiz olarak bağlanabileceğimi düşündüm. Ancak bağlanmaya çalıştığımda `ERROR 2002 (HY000)` hatası ile karşılaştım. HTTP servisinden devam edelim.
+Tarama sonucunda 22 (SSH), 80 (HTTP) ve 3306 (Mysql) numaralı portların açık olduğunu öğreniyoruz.
 
 ### 80 numaralı port'un incelenmesi
 
