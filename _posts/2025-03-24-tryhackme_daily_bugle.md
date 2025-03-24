@@ -30,7 +30,7 @@ Web uygulamasında örümcek adamın hırsızlık yaptığı bir haber paylaşı
 ```console
 $ joomla -u 10.10.19.236
 ...
-[+] Detecting Joomla Version                                                                                                                                                                  
+[+] Detecting Joomla Version
 [++] Joomla 3.7.0 
 ...
 ```
@@ -80,16 +80,16 @@ Joomla uygulamasının konfigürasyon dosyasının içerisinden `jjameson` kulla
 
 ```console
 bash-4.2$ cat configuration.php
-public $dbtype = 'mysqli';                                                                                                                                                            
-public $host = 'localhost';                                                                                                                                                           
-public $user = 'root';                                                                                                                                                                
-public $password = 'nv5uz9r3ZEDzVjNu';                                                                                                                                                
+public $dbtype = 'mysqli';
+public $host = 'localhost';
+public $user = 'root';
+public $password = 'nv5uz9r3ZEDzVjNu';
 public $db = 'joomla';
 ```
 
 Kullanıcıya geçiş yaptıktan sonra ilk bayrağı kendi dizininden alıyoruz.
 
-# root
+### root
 
 `sudo -l` komutunu kullandıktan sonra yum aracını parola gerektirmeden ve tüm kullanıcılar adına çalıştırabileceğimizi öğreniyoruz.
 
