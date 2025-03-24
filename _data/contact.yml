@@ -3,6 +3,10 @@
 - type: github
   icon: "fab fa-github"
 
+- type: buy me a coffee
+  icon: "fas fa-coffee"
+  noblank: true # open link in current tab
+
 - type: rss
   icon: "fas fa-rss"
   noblank: true
