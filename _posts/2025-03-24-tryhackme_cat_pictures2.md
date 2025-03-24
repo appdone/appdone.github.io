@@ -105,7 +105,7 @@ Burada bir takım işler yapabileceğimiz ve yaptığımız işlerin kayıtları
 
 ## Sömürü aşaması
 
-1337 numaralı portta çalışan uygulamada ki `run ansible` seçeneği büyük ihtimalle 3000 numaralı portta çalışan gitea sayfasındaki ansible dosyasındaki playbook.yaml dosyasını çalıştırıyor. Bu dosyanın komut çalıştırıldığı yere shell alabileceğimiz bir komut girer ve 1337 numaralı porttaki `run ansible` butonuna tıklarsak shell alabiliriz. Öncelikle dosyayı düzenleyelim.
+1337 numaralı portta çalışan uygulamadaki `run ansible` seçeneği büyük ihtimalle 3000 numaralı portta çalışan gitea sayfasındaki ansible dosyasını çalıştırıyor. Bu dosyanın komut çalıştırıldığı yere shell alabileceğimiz bir komut girer ve 1337 numaralı porttaki `run ansible` butonuna tıklarsak shell alabiliriz. Öncelikle dosyayı düzenleyelim.
 
 ```yaml
 ---
