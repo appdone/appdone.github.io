@@ -13,9 +13,7 @@ image:
 
 DNSMap aracından yararlanarak hedef domaine ait olan subdomainleri tespit edecek ve bu subdomainlerden birinin sertifikasından yararlanarak bayrağın bulunduğu adresi öğreneceğiz.
 
-## Keşif aşaması
-
-### 80/443 numaralı portun incelenmesi
+## 80/443 numaralı portun incelenmesi
 
 ![](1.webp){: width="1200" height="600" }
 
