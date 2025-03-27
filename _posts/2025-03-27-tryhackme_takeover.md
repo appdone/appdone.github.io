@@ -43,7 +43,7 @@ IP address #1: 10.10.191.95
 [+] completion time: 225 second(s)
 ```
 
-Tarama sonucunda üç adet subdomaini tespit ettiğini görüyoruz. Her birini /etc/hosts dosyasına girdikten sonra subdomainleri tek tek incelemeye başladım. `support.futurevera.thm` adresinin sertifikasını görüntülediğimizde onun da altında bir subdomain olduğunu görüyoruz.
+Tarama sonucunda üç adet subdomaini tespit ettiğini görüyoruz. Her birini /etc/hosts dosyasına girdikten sonra subdomainleri tek tek incelemeye başladım. `support.futurevera.thm` adresinin sertifikasını görüntülediğimizde onun da altında bir subdomain olduğunu öğreniyoruz.
 
 ![](2.webp){: width="1200" height="600" }
 
