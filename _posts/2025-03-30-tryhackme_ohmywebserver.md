@@ -4,6 +4,7 @@ author: appdone
 categories: [TryHackMe Challenges]
 tags: [remote code execution]
 render_with_liquid: false
+---
 
 ## Özet
 
