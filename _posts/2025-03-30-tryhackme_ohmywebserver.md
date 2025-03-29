@@ -8,7 +8,7 @@ render_with_liquid: false
 
 ## Özet
 
-Oh My WebServer, Remote Code Execution zafiyetine sahip bir orta seviye bir web uygulamasıdır. Apache httpd'nin 2.4.49 sürümünde bulunan bu zafiyeti sömürecek ve sistemden shell alacağız. Sonrada aynı ağ içerisinde başka bir cihazın daha olduğunu öğrenecek ve cihazın üzerinde çalışan zafiyetli bir porttan yararlanarak sistemden tam yetkili olarak bir bağlantı alacağız.
+Oh My WebServer, Remote Code Execution zafiyetine sahip orta seviye bir web uygulamasıdır. Apache httpd'nin 2.4.49 sürümünde bulunan bu zafiyeti sömürecek ve sistemden shell alacağız. Sonrada aynı ağ içerisinde başka bir cihazın daha olduğunu öğrenecek ve cihazın üzerinde çalışan zafiyetli bir porttan yararlanarak sistemden tam yetkili olarak bir bağlantı alacağız.
 
 ## Keşif aşaması
 
@@ -32,7 +32,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 ### 80 numaralı portun incelenmesi
 
-Tarama sonucunda 80 portu üzerinde Apache httpd'nin 2.4.49 sürümünün çalıştığını gördüm. Bu sürüm üzerinde bir `Remote Code Execution` zafiyeti bulunuyor. Bu zafiyeti sömürmek için bir metasploitte bir exploit bulunuyor.
+Tarama sonucunda 80 portu üzerinde Apache httpd'nin 2.4.49 sürümünün çalıştığını gördüm. Bu sürüm üzerinde bir `Remote Code Execution` zafiyeti bulunuyor. Bu zafiyeti sömürmek için metasploitte bir exploit bulunuyor.
 
 ## Sömürü aşaması
 
