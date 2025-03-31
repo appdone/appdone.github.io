@@ -39,7 +39,7 @@ PORT     STATE SERVICE    VERSION
 
 ![](1.webp){: width="1200" height="600" }
 
-Tyler Ramsbey tarafından yapılmış bir web uygulaması ile karşı karşıyayız. Uygulamanın amacını tam olarak anlamış değilim. Bazı yerlerde CTF'ler düzenledikleri, bazı yerlerde ise kurumların güvenliğini sağladıkları yazıyor. Sanırım bu iki işi de görüyorlar. İletişim sayfasına baktığımızda iletişim için bir kullanıcı adı verdiğini ve silverpeas üzerinden onlarla iletişim kurabileceğimiz belirtilmiş.
+Tyler Ramsbey tarafından yapılmış bir web uygulaması ile karşı karşıyayız. Uygulamanın amacını tam olarak anlamış değilim. Bazı yerlerde CTF'ler düzenledikleri, bazı yerlerde ise kurumların güvenliğini sağladıkları yazıyor. Sanırım bu iki işi de görüyorlar. İletişim sayfasına baktığımızda, iletişim için bir kullanıcı adı verildiğini ve onlarla Silverpeas üzerinden iletişim kurabileceğimizin belirtildiğini görüyoruz.
 
 ![](2.webp){: width="900" height="500" }
 
