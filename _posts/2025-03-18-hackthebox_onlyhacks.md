@@ -1,5 +1,5 @@
 ---
-title: 'HackTheBox | OnlyHacks WriteUp'
+title: 'HackTheBox Challenges | OnlyHacks WriteUp'
 author: appdone
 categories: [HackTheBox Challenges]
 tags: [idor, xss]
