@@ -75,7 +75,7 @@ Sistemde `manager`, `scr1ptkiddy` ve `administrator` olmak üzere üç adet kull
 
 ![](6.webp){: width="1200" height="600" }
 
-scr1ptkiddy kullanıcısına gönderilen mesajda bir saat içinde bir VR oyununa başlayacaklarını ve katılmak isteyip istemediğini sorduğunu görüyoruz. Bu arada url yapısı dikkatimizi çekiyor. 
+scr1ptkiddy kullanıcısına gönderilen mesajda bir saat içinde bir VR oyununa başlayacaklarını ve katılmak isteyip istemediğini sorduğunu görüyoruz. Burada url yapısı dikkatimizi çekiyor. 
 
 ![](7.webp){: width="900" height="500" }
 
