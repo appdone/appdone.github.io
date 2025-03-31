@@ -47,7 +47,7 @@ Tyler Ramsbey tarafından yapılmış bir web uygulaması ile karşı karşıyay
 
 ![](3.webp){: width="1200" height="600" }
 
-Bahsettiği `silverpeas` uygulaması `8080` numaralı port üzerinde bulunuyor. İletişim kurmak için bu adrese sadece kullanıcı adı ile yönlendirdiğini düşünürsek, parolasının aynı kullanıcı adına sahip olduğunu veya varsayılan bilgileri içerdiğini düşünebiliriz ama değil. Cewl aracı ile 80 numaralı port üzerindeki web sitesindeki bilgilerden bir parola listesi oluşturalım. Daha sonra ise hydra aracından yararlanarak bir kaba kuvvet saldırısı başlatalım.
+Bahsettiği `silverpeas` uygulaması `8080` numaralı port üzerinde bulunuyor. İletişim kurmak için bu adrese sadece kullanıcı adı ile yönlendirdiğini düşünürsek, parolasının aynı kullanıcı adına sahip olduğunu veya varsayılan bilgileri içerdiğini düşünebiliriz ama değil. Cewl aracı ile 80 numaralı port üzerinde çalışan web sitedeki bilgilerden bir parola listesi oluşturalım. Daha sonra ise hydra aracından yararlanarak bir kaba kuvvet saldırısı başlatalım.
 
 ```console
 $ cewl http://10.10.53.94 > passwords.txt
@@ -100,13 +100,13 @@ uid=1001(tim) gid=1001(tim) groups=1001(tim),4(adm)
 
 ```console
 tim@silver-platter:~$ find / -group adm 2>/dev/null
-/var/log/kern.log                                                                                                                                                                             
-/var/log/syslog.3.gz                                                                                                                                                                          
-/var/log/kern.log.2.gz                                                                                                                                                                        
-/var/log/syslog.2.gz                                                                                                                                                                          
-/var/log/auth.log.1                                                                                                                                                                           
-/var/log/kern.log.1                                                                                                                                                                           
-/var/log/dmesg.4.gz                                                                                                                                                                           
+/var/log/kern.log
+/var/log/syslog.3.gz
+/var/log/kern.log.2.gz
+/var/log/syslog.2.gz
+/var/log/auth.log.1
+/var/log/kern.log.1
+/var/log/dmesg.4.gz
 ...
 ```
 
