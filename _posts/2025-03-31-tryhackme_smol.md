@@ -11,6 +11,8 @@ image:
 
 ## Özet
 
+Smol, zafiyetli bir eklentiye sahip orta seviye linux bir makinedir. Öncelikle eklentide bulunan "Local File Inclusion" zafiyetinden yararlanarak kullanıcı bilgilerini alacağız. Daha sonra bulduğumuz bir yönergeyi takip ederek sistemden shell elde edeceğiz. Sisteme girdikten sonra ise dört kullanıcı arasında sırasıyla geçiş yapacak, en son ise sudo haklarımızdan yararlanarak yetki yükselteceğiz.
+
 ### Makine hakkında ek bilgiler
 
 - WordPress içerik yönetim sistemi kullanılıyor.
