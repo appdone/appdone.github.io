@@ -9,7 +9,7 @@ image:
   path: logo.webp
 ---
 
-Kasabadaki en havalı hayaletler bir perili ev partisine gidiyor. Bu büyük partiye katılabilmemiz için testi geçmemiz gerek. Elimizde bir dosya var ve bu dosya üzerinden giriş biletini almamız gerekiyor. Öncelikle dosyayı yetkilendirip, çalıştıralım ve bizden ne istediğini görelim.
+Kasabadaki en havalı hayaletler bir perili ev partisine gidiyor. Bu büyük partiye katılabilmemiz için verilen dosyayı analiz etmemiz ve sonunucda dosya üzerinden davet kodunu almamız gerekiyor. Öncelikle dosyayı yetkilendirip, çalıştıralım ve bizden ne istediğini görelim.
 
 ```console
 $ chmod +x pass
