@@ -65,7 +65,7 @@ Updated 2873 paths from the index
 Dosyaları incelerken settings.php dosyasının içerisinde mysql bilgilerini buluyoruz. Ancak mysql servisine dışarıdan bağlanamayacağımız için elde ettiğimiz parolayı başka bir yerde kullanmamız gerekebilir.
 
 ```php
-$database = 'mysql://root:[GİZLi]@127.0.0.1/backdrop';                                                                                                                            
+$database = 'mysql://root:[GİZLi]@127.0.0.1/backdrop';
 $database_prefix = '';
 ```
 
@@ -163,7 +163,7 @@ Stack trace:
   thrown in /backdrop_tool/bee/commands/db.bee.inc on line 279
 ```
 
-Komutları tekrar gözden geçirdikten sonra `--root` parametresi ile CMS'in adresini belirtebileceğimizi görüyoruz. Daha sonra ise komutu parametreyi komuta dahil ediyor ve çalıştırıyoruz.
+Komutları tekrar gözden geçirdikten sonra `--root` parametresi ile CMS'in adresini belirtebileceğimizi görüyoruz. Daha sonra ise parametreyi komuta dahil ediyor ve çalıştırıyoruz.
 
 ```console
 johncusack@dog:~$ sudo /usr/local/bin/bee ev "system('/bin/bash');" --root=/var/www/html/
