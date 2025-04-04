@@ -11,7 +11,7 @@ image:
 
 ## Özet
 
-Lame, makinesi Samba'nın `3.0.20` zafiyetli sürümünü kullanan debian tabanlı kolay seviye bir makinedir. Metasploit üzerinden bu sürüme uygun olan exploit'i çalıştıracak ve sistemde yetkili bir bağlantıya sahip olacağız.
+Lame, Samba'nın zafiyetli sürümünü kullanan debian tabanlı kolay seviye bir makinedir. Metasploit üzerinden bu sürüme uygun olan exploit'i çalıştıracak ve sistemde yetkili bir bağlantıya sahip olacağız.
 
 ## Keşif aşaması
 
@@ -80,7 +80,7 @@ drwxr-xr-x    2 0        65534        4096 Mar 17  2010 ..
 ...
 ```
 
-Sözde zafiyetli sürümünün üzerinde barınan backdoor ise kapalı gibi görünüyor, nitekim servisi sömüremiyoruz.
+Sözde zafiyetli sürümünün üzerinde barınan backdoor kapalı gibi görünüyor, nitekim servisi sömüremiyoruz.
 
 ```console
 [msf](Jobs:0 Agents:0) exploit(unix/ftp/vsftpd_234_backdoor) >> exploit
