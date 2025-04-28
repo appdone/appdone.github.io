@@ -9,8 +9,6 @@ render_with_liquid: false
 
 Game of Thrones dizisi temalı bu meydan okumada, belli başlı dosyaları inceleyerek kullanıcılar arasında geçiş yapacağız.
 
-### Makine hakkında ek bilgiler
-
 ## Keşif aşaması
 
 ### Nmap taraması
